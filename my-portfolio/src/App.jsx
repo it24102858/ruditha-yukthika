@@ -669,21 +669,21 @@ export default function Portfolio() {
               <a className="btn-primary" href="mailto:rudithayukthika29@gmail.com" style={{ display: "inline-block", marginBottom: "2rem" }}>Send Me a Message</a>
               <div className="contact-links">
   {[
-  ["GitHub", "https://github.com/it24102858"],
-  ["LinkedIn", "https://www.linkedin.com/in/ruditha-yukthika-57a239298/"],
-  ["Email", "mailto:rudithayukthika29@gmail.com"]
-].map(([label, handle]) => (
-  <a
-    className="contact-chip"
-    key={label}
-    href={handle}
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ textDecoration: "none", color: "inherit" }}
-  >
-    <strong>{label}</strong> — {handle}
-  </a>
-))}
+    ["GitHub", "https://github.com/it24102858"],
+    ["LinkedIn", "https://www.linkedin.com/in/ruditha-yukthika-57a239298/"],
+    ["Email", "mailto:rudithayukthika29@gmail.com"]
+  ].map(([label, handle]) => (
+    <a
+      className="contact-chip"
+      key={label}
+      href={handle}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
+      <strong>{label}</strong>
+    </a>
+  ))}
 </div>
             </div>
           </div>
