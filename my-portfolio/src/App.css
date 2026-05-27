@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #00aaff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
