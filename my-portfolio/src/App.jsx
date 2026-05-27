@@ -666,7 +666,7 @@ export default function Portfolio() {
               <div className="section-label"></div>
               <h2 className="contact-title">Got a project<br/>in <span style={{color:"var(--blue)"}}>mind?</span></h2>
               <p className="contact-sub">I'm always open to discussing new opportunities, creative ideas, or interesting technical challenges.</p>
-              <a className="btn-primary" href="mailto:alex@example.com" style={{ display: "inline-block", marginBottom: "2rem" }}>Send Me a Message</a>
+              <a className="btn-primary" href="mailto:rudithayukthika29@gmail.com" style={{ display: "inline-block", marginBottom: "2rem" }}>Send Me a Message</a>
               <div className="contact-links">
   {[
   ["GitHub", "https://github.com/it24102858"],
