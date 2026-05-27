@@ -481,12 +481,62 @@ const SKILLS = [
 ];
 
 const PROJECTS = [
-  { num: "01", image: "src/assets/EcoLeaf.png", color: "#0a0d1e", title: "EcoLeaf Mobile Application UI", tags: ["Figma","Wireframing","Prototyping","User Research"], desc: "EcoLeaf Mobile Application UI is a modern mobile app interface designed for a plant store, providing users with an easy and engaging shopping experience.",  repo: "https://www.figma.com/design/uo50jXsHm1tKgpfUDiAFJL/EcoLeaf?nodeid=01&t=f8WBDlhaJiO0NhxQ-1" },
-  { num: "02", image: "src/assets/Vehicle1.png", color: "#0d0a1e", title: "Vehicle Intelligent System", tags: ["React","JavaScript","Node.js","MongoDB Atlas"], desc: "Vehicle Intelligent System is a modern full-stack vehicle marketplace with secure authentication, role-based dashboards, and vehicle management features for buyers, sellers, and admins.", live: "https://vehicle-intelligent-system.vercel.app/", repo: "https://github.com/it24102858/ITP-Vehicle-Intelligent-System" },
-  { num: "03", image: "src/assets/Travel.png", color: "#030d1a", title: "Travel Explore Mobile Application UI", tags: ["Figma","Wireframing","Prototyping","User Research"], desc: "Travel Explore UI is a modern travel app interface designed for discovering destinations and planning trips with a clean and user-friendly experience.",  repo: "https://www.figma.com/design/qIshmFaydDAeoFH26O6pzv/TExplore?node-id=01&t=NnWXSfRbDYMKdm36-1" },
-  { num: "04", image: "src/assets/mobile.jpeg", color: "#0d0510", title: "Smart Tourism App", tags: ["React Native","JavaScript","Android Studio","MongoDB Atlas"], desc: "Smart Tourism App is a travel application designed to help users explore destinations, book services, and plan trips easily. The UI/UX was designed using Figma, and the app was developed with React Native and Node.js for a smooth and modern user experience.", live:"https://smart-tourism-mobile-application.onrender.com", repo: "https://github.com/it24102858/Smart-Tourism-Mobile-Application-" },
-  { num: "05", image: "src/assets/Wordpress.png", color: "#0a0d1e", title: "Technovaz – Modern Tech Blogging Website", tags: ["Wordpress","Elementor"], desc: "Technovaz is a modern technology blog website focused on AI, cybersecurity, smartphone innovations, and next-generation computing. The website was designed and managed using WordPress, providing a responsive and user-friendly platform for publishing tech news, articles, and future technology insights.", live: "https://technovaz.kesug.com/?i=1"},
-  { num: "06", image: "src/assets/Insurance.jpeg", color: "#0a0d1e", title: "Insurance Management System", tags: ["Spring Boot","Java","JavaScript","MySQL","CSS","HTML"], desc: "Insurance Management System is a web application for managing insurance policies, customer records, and claims efficiently. The project was developed using Spring Boot, Java, MySQL, HTML5, CSS3, and JavaScript for a secure and user-friendly experience.",repo: "https://github.com/it24102664/Web-based-Vehicle-Insurance-Management-System"}
+  {
+    num: "01",
+    image: ecoLeaf,
+    color: "#0a0d1e",
+    title: "EcoLeaf Mobile Application UI",
+    tags: ["Figma", "Wireframing", "Prototyping", "User Research"],
+    desc: "EcoLeaf Mobile Application UI is a modern mobile app interface designed for a plant store, providing users with an easy and engaging shopping experience.",
+    repo: "https://www.figma.com/design/uo50jXsHm1tKgpfUDiAFJL/EcoLeaf?nodeid=01&t=f8WBDlhaJiO0NhxQ-1"
+  },
+  {
+    num: "02",
+    image: vehicle,
+    color: "#0d0a1e",
+    title: "Vehicle Intelligent System",
+    tags: ["React", "JavaScript", "Node.js", "MongoDB Atlas"],
+    desc: "Vehicle Intelligent System is a modern full-stack vehicle marketplace with secure authentication, role-based dashboards, and vehicle management features for buyers, sellers, and admins.",
+    live: "https://vehicle-intelligent-system.vercel.app/",
+    repo: "https://github.com/it24102858/ITP-Vehicle-Intelligent-System"
+  },
+  {
+    num: "03",
+    image: travel,
+    color: "#030d1a",
+    title: "Travel Explore Mobile Application UI",
+    tags: ["Figma", "Wireframing", "Prototyping", "User Research"],
+    desc: "Travel Explore UI is a modern travel application interface designed for discovering destinations and planning trips with a clean and user-friendly experience.",
+    repo: "https://www.figma.com/design/qIshmFaydDAeoFH26O6pzv/TExplore?node-id=01&t=NnWXSfRbDYMKdm36-1"
+  },
+  {
+    num: "04",
+    image: mobile,
+    color: "#0d0510",
+    title: "Smart Tourism App",
+    tags: ["React Native", "JavaScript", "Android Studio", "MongoDB Atlas"],
+    desc: "Smart Tourism App is a travel application designed to help users explore destinations, book services, and plan trips easily. Built using React Native and Node.js.",
+    live: "https://smart-tourism-mobile-application.onrender.com",
+    repo: "https://github.com/it24102858/Smart-Tourism-Mobile-Application-"
+  },
+  {
+    num: "05",
+    image: wordpress,
+    color: "#0a0d1e",
+    title: "Technovaz – Tech Blogging Website",
+    tags: ["WordPress", "Elementor", "Blogging"],
+    desc: "Technovaz is a modern technology blog website focused on AI, cybersecurity, smartphone innovations, and next-generation computing.",
+    live: "https://technovaz.kesug.com/?i=1"
+  },
+  {
+    num: "06",
+    image: insurance,
+    color: "#0a0d1e",
+    title: "Insurance Management System",
+    tags: ["Spring Boot", "Java", "MySQL", "HTML", "CSS", "JavaScript"],
+    desc: "Insurance Management System is a web application for managing insurance policies, customer records, and claims efficiently using Spring Boot backend.",
+    repo: "https://github.com/it24102664/Web-based-Vehicle-Insurance-Management-System"
+  }
 ];
 
 function useIntersect(ref) {
