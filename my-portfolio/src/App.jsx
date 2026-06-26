@@ -473,10 +473,11 @@ import { FaNetworkWired } from "react-icons/fa";
 
 //add new one for Projects section
 import ecoLeaf from "./assets/EcoLeaf.png";
-import vehicle from "./assets/Vehicle1.png";
+  //add a new ui peroject
+import organic from "./assets/Organic1.png";
 import travel from "./assets/Travel.png";
-import mobile from "./assets/mobile.jpeg";
-import wordpress from "./assets/Wordpress.png";
+import vehicle from "./assets/Vehicle1.png";
+import mobile from "./assets/mobileApp.jpeg";
 import insurance from "./assets/Insurance.jpeg";
 
 const SKILLS = [
@@ -499,18 +500,19 @@ const PROJECTS = [
     repo: "https://www.figma.com/design/uo50jXsHm1tKgpfUDiAFJL/EcoLeaf?nodeid=01&t=f8WBDlhaJiO0NhxQ-1"
   },
 
-  {
+  //add the new ui peroject
+
+    {
     num: "02",
-    image: vehicle,
-    color: "#0d0a1e",
-    title: "Vehicle Intelligent System",
-    tags: ["React", "JavaScript", "Node.js", "MongoDB Atlas"],
-    desc: "Vehicle Intelligent System is a modern full-stack vehicle marketplace with secure authentication, role-based dashboards, and vehicle management features.",
-    live: "https://vehicle-intelligent-system.vercel.app/",
-    repo: "https://github.com/it24102858/ITP-Vehicle-Intelligent-System"
+    image: organic,
+    color: "#030d1a",
+    title: "Organic Food Mobile Application UI",
+    tags: ["Figma", "Wireframing", "Prototyping", "User Research"],
+    desc: "A modern organic food app UI featuring product browsing, shopping cart, and seamless checkout.",
+    repo: "https://www.figma.com/design/beOwPDYtWn68XAHK7Q7SLp/Untitled?node-id=0-1&t=OelaTS5eRjDmz2Yy-1"
   },
 
-  {
+   {
     num: "03",
     image: travel,
     color: "#030d1a",
@@ -520,8 +522,22 @@ const PROJECTS = [
     repo: "https://www.figma.com/design/qIshmFaydDAeoFH26O6pzv/TExplore?node-id=01&t=NnWXSfRbDYMKdm36-1"
   },
 
+
   {
     num: "04",
+    image: vehicle,
+    color: "#0d0a1e",
+    title: "Vehicle Intelligent System",
+    tags: ["React", "JavaScript", "Node.js", "MongoDB Atlas"],
+    desc: "Vehicle Intelligent System is a modern full-stack vehicle marketplace with secure authentication, role-based dashboards, and vehicle management features.",
+    live: "https://vehicle-intelligent-system.vercel.app/",
+    repo: "https://github.com/it24102858/ITP-Vehicle-Intelligent-System"
+  },
+
+ 
+
+  {
+    num: "05",
     image: mobile,
     color: "#0d0510",
     title: "Smart Tourism App",
@@ -531,15 +547,7 @@ const PROJECTS = [
     repo: "https://github.com/it24102858/Smart-Tourism-Mobile-Application-"
   },
 
-  {
-    num: "05",
-    image: wordpress,
-    color: "#0a0d1e",
-    title: "Technovaz – Modern Tech Blogging Website",
-    tags: ["WordPress", "Elementor"],
-    desc: "Technovaz is a modern technology blog website focused on AI, cybersecurity, smartphone innovations, and next-generation computing.",
-    live: "https://technovaz.kesug.com/?i=1"
-  },
+
 
   {
     num: "06",
