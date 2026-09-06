@@ -470,6 +470,7 @@ import { FaFigma } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { FaDatabase } from "react-icons/fa";
 import { FaNetworkWired } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaEye } from "react-icons/fa";
 
 //add new one for Projects section
 import ecoLeaf from "./assets/EcoLeaf.png";
@@ -489,6 +490,18 @@ const SKILLS = [
   { icon: <FaNetworkWired size={30} color="#1BA0E1" />, name: "Cisco Packet Tracer", desc: "Simulating and designing computer networks using Cisco Packet Tracer.", pct: 70 },
 ];
 
+/*
+  LINK_CONFIG — one entry per button "type" you can attach to a project.
+  Add more types here any time (e.g. "figma2", "video", "caseStudy"...)
+  without ever touching the card markup below.
+*/
+const LINK_CONFIG = {
+  figma:  { label: "View Design", icon: <FaFigma size={12} /> },
+  live:   { label: "Live Demo",   icon: <FaExternalLinkAlt size={11} /> },
+  github: { label: "Github",      icon: <FaGithub size={13} /> },
+  view:   { label: "View",        icon: <FaEye size={12} /> },
+};
+
 const PROJECTS = [
   {
     num: "01",
@@ -497,32 +510,37 @@ const PROJECTS = [
     title: "EcoLeaf Mobile Application UI",
     tags: ["Figma", "Wireframing", "Prototyping", "User Research"],
     desc: "EcoLeaf Mobile Application UI is a modern mobile app interface designed for a plant store, providing users with an easy and engaging shopping experience.",
-    repo: "https://www.figma.com/design/uo50jXsHm1tKgpfUDiAFJL/EcoLeaf?nodeid=01&t=f8WBDlhaJiO0NhxQ-1"
+    links: [
+      { type: "figma", url: "https://www.figma.com/design/uo50jXsHm1tKgpfUDiAFJL/EcoLeaf?nodeid=01&t=f8WBDlhaJiO0NhxQ-1" }
+    ]
   },
-
+ 
   //add the new ui peroject
-
-    {
+ 
+  {
     num: "02",
     image: organic,
     color: "#030d1a",
     title: "Organic Food Mobile Application UI",
     tags: ["Figma", "Wireframing", "Prototyping", "User Research"],
     desc: "A modern organic food app UI featuring product browsing, shopping cart, and seamless checkout.",
-    repo: "https://www.figma.com/design/beOwPDYtWn68XAHK7Q7SLp/Untitled?node-id=0-1&t=OelaTS5eRjDmz2Yy-1"
+    links: [
+      { type: "figma", url: "https://www.figma.com/design/beOwPDYtWn68XAHK7Q7SLp/Untitled?node-id=0-1&t=OelaTS5eRjDmz2Yy-1" }
+    ]
   },
-
-   {
+ 
+  {
     num: "03",
     image: travel,
     color: "#030d1a",
     title: "Travel Explore Mobile Application UI",
     tags: ["Figma", "Wireframing", "Prototyping", "User Research"],
     desc: "Travel Explore UI is a modern travel application interface designed for discovering destinations and planning trips.",
-    repo: "https://www.figma.com/design/qIshmFaydDAeoFH26O6pzv/TExplore?node-id=01&t=NnWXSfRbDYMKdm36-1"
+    links: [
+      { type: "figma", url: "https://www.figma.com/design/qIshmFaydDAeoFH26O6pzv/TExplore?node-id=0-1&t=zV2k81lfiWfTApn8-1" }
+    ]
   },
-
-
+ 
   {
     num: "04",
     image: vehicle,
@@ -530,12 +548,12 @@ const PROJECTS = [
     title: "Vehicle Intelligent System",
     tags: ["React", "JavaScript", "Node.js", "MongoDB Atlas"],
     desc: "Vehicle Intelligent System is a modern full-stack vehicle marketplace with secure authentication, role-based dashboards, and vehicle management features.",
-    live: "https://vehicle-intelligent-system.vercel.app/",
-    repo: "https://github.com/it24102858/ITP-Vehicle-Intelligent-System"
+    links: [
+      { type: "live", url: "https://vehicle-intelligent-system.vercel.app/" },
+      { type: "github", url: "https://github.com/it24102858/ITP-Vehicle-Intelligent-System" }
+    ]
   },
-
  
-
   {
     num: "05",
     image: mobile,
@@ -543,12 +561,12 @@ const PROJECTS = [
     title: "Smart Tourism App",
     tags: ["React Native", "JavaScript", "Android Studio", "MongoDB Atlas"],
     desc: "Smart Tourism App helps users explore destinations, book services, and plan trips easily using React Native and Node.js.",
-    live: "https://smart-tourism-mobile-application.onrender.com",
-    repo: "https://github.com/it24102858/Smart-Tourism-Mobile-Application-"
+    links: [
+      { type: "live", url: "https://smart-tourism-mobile-application.onrender.com" },
+      { type: "github", url: "https://github.com/it24102858/Smart-Tourism-Mobile-Application-" }
+    ]
   },
-
-
-
+ 
   {
     num: "06",
     image: insurance,
@@ -556,7 +574,9 @@ const PROJECTS = [
     title: "Insurance Management System",
     tags: ["Spring Boot", "Java", "JavaScript", "MySQL", "CSS", "HTML"],
     desc: "Insurance Management System is a web application for managing insurance policies, customer records, and claims efficiently.",
-    repo: "https://github.com/it24102664/Web-based-Vehicle-Insurance-Management-System"
+    links: [
+      { type: "github", url: "https://github.com/it24102664/Web-based-Vehicle-Insurance-Management-System" }
+    ]
   }
 ];
 
@@ -590,6 +610,32 @@ function SkillCard({ icon, name, desc, pct, index }) {
     </div>
   );
 }
+
+/*
+  ProjectLinks
+*/
+function ProjectLinks({ links = [] }) {
+  if (!links.length) return null;
+  return (
+    <div className="proj-links">
+      {links.map(({ type, url }, i) => {
+        const cfg = LINK_CONFIG[type] || LINK_CONFIG.view;
+        return (
+          <a
+            className="proj-link"
+            key={`${type}-${i}`}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {cfg.icon} {cfg.label}
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
 
 export default function Portfolio() {
   const [scrolled, setScrolled] = useState(false);
@@ -694,7 +740,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* PROJECTS */}
+         {/* PROJECTS */}
         <section id="projects">
           <div className="container">
             <div className="fade-in">
@@ -703,26 +749,23 @@ export default function Portfolio() {
               <div className="divider"/>
             </div>
             <div className="projects-grid">
-              {PROJECTS.map((p, i) => (
-                <div className="proj-card fade-in" key={p.num} style={{ transitionDelay: `${i * 80}ms` }}>
-                  <div className="proj-thumb" style={{ background: `linear-gradient(135deg, ${p.color} 0%, #060810 100%)` }}>
-                    <div className="proj-thumb-glow"/>
-                    <span className="proj-num">{p.num}</span>
-                    
-                   {p.image
-                       ? <img src={p.image} style={{ height:"100%", objectFit:"cover", position:"absolute", inset:0, opacity:0.85}} />
-                       : <span style={{ fontSize: "4rem", position: "relative", zIndex: 1 }}>{p.icon}</span>
-                  }
-
-                  </div>
+                          {PROJECTS.map((p, i) => (
+                            <div className="proj-card fade-in" key={p.num} style={{ transitionDelay: `${i * 80}ms` }}>
+                              <div className="proj-thumb" style={{ background: `linear-gradient(135deg, ${p.color} 0%, #060810 100%)` }}>
+                                <div className="proj-thumb-glow"/>
+                                <span className="proj-num">{p.num}</span>
+                                
+                               {p.image
+                                   ? <img src={p.image} style={{ height:"100%", objectFit:"cover", position:"absolute", inset:0, opacity:0.85}} />
+                                   : <span style={{ fontSize: "4rem", position: "relative", zIndex: 1 }}>{p.icon}</span>
+                              }
+            
+                              </div>
                   <div className="proj-body">
                     <div className="proj-tags">{p.tags.map(t => <span className="proj-tag" key={t}>{t}</span>)}</div>
                     <div className="proj-title">{p.title}</div>
                     <p className="proj-desc">{p.desc}</p>
-                    <div className="proj-links">
-                      <a className="proj-link" href={p.live}>↗ Live Demo</a>
-                      <a className="proj-link" href={p.repo}>⌥ Source</a>
-                    </div>
+                    <ProjectLinks links={p.links} />
                   </div>
                 </div>
               ))}
